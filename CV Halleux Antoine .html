@@ -1,0 +1,258 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antoine Halleux - Administrateur Systèmes et Réseaux</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #13EBA2;
+      --text: #e0e0e0;
+      --bg-card: #1e1e1e;
+      --bg-page: #121212;
+      --muted: #aaa;
+    }
+
+    @page { margin: 0; size: A4; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text);
+    }
+
+    .cv-container {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 40px auto;
+      background: var(--bg-card);
+      padding: 12mm 18mm;
+      border-radius: 4px;
+      box-sizing: border-box;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+
+    h1 { font-size: 2.5rem; margin: 0; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; }
+
+    .contact-info {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .contact-info i { color: var(--primary); }
+
+    section { margin-top: 20px; }
+
+    h2 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .item { margin-bottom: 12px; }
+    .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .title { font-weight: 600; font-size: 1.05rem; color: #ffffff; }
+    .period { font-style: italic; color: var(--primary); font-size: 0.85rem; }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .skill-category strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 5px;
+      border-left: 3px solid var(--primary);
+      padding-left: 10px;
+      font-size: 0.95rem;
+    }
+
+    ul { padding-left: 18px; color: var(--text); font-size: 0.9rem; list-style: none; margin: 0; }
+    li { margin-bottom: 3px; position: relative; }
+    li::before { content: "•"; color: var(--primary); font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
+
+    #downloadBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--primary);
+      color: #121212;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 1000;
+      text-transform: uppercase;
+    }
+
+    .pdf-fix { margin: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+  </style>
+</head>
+<body>
+
+  <main class="cv-container" id="cv-content">
+    <header>
+      <h1>Antoine Halleux</h1>
+      <div class="contact-info">
+        <span><i class="fas fa-map-marker-alt"></i> Abolens, Belgique</span>
+        <span><i class="fas fa-phone"></i> 0488.94.14.83</span>
+        <span><i class="fas fa-envelope"></i> antoine.halleux@apprenant.ifapme.be</span>
+      </div>
+    </header>
+
+    <section>
+      <h2><i class="fas fa-user-circle"></i> Profil Professionnel</h2>
+      <p style="font-size: 0.9rem; margin: 0;">
+        Technicien en reconversion vers l'administration IT (IFAPME). Passionné par le self-hosting et les infrastructures Linux, je combine une solide expérience en résolution de problèmes techniques avec une volonté de contribuer à des environnements informatiques performants.
+      </p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-project-diagram"></i> Projet Personnel</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="title">Déploiement d'une infrastructure multimédia automatisée</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--muted); margin: 5px 0;">Mise en place d'une solution de streaming sous Debian 12 (Projet Self-hosting)</p>
+        <ul>
+          <li>Installation et configuration de <strong>Jellyfin</strong> pour la diffusion média.</li>
+          <li>Automatisation du cycle de vie des médias via la suite <strong>Radarr, Sonarr et Prowlarr</strong>.</li>
+          <li>Gestion des téléchargements sécurisés avec <strong>qBittorrent</strong>.</li>
+          <li>Configuration des permissions système (ACL), gestion des dossiers partagés et optimisation Linux.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-briefcase"></i> Expérience Professionnelle</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="title">Entreprise Bataille – Technicien de Maintenance</span>
+          <span class="period">2020 – 2023</span>
+        </div>
+        <ul>
+          <li>Maintenance préventive et corrective d’un parc de 50+ machines.</li>
+          <li>Optimisation des diagnostics réduisant l'immobilisation de 25%.</li>
+          <li>Formation de nouveaux techniciens aux protocoles de sécurité.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="title">Bpost – Agent Logistique</span>
+          <span class="period">Mai 2024 – Juin 2024</span>
+        </div>
+        <ul>
+          <li>Livraison quotidienne de 500+ colis sous contraintes de temps.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="title">IFAPME Verviers – Administrateur Systèmes et Réseaux</span>
+          <span class="period">Depuis 2024</span>
+        </div>
+        <ul>
+          <li>Administration Linux et Windows Server, Sécurité et Virtualisation.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="title">IPES Huy – CESS Sciences Appliquées</span>
+          <span class="period">2015 – 2020</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-tools"></i> Compétences Techniques</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <strong>Systèmes & Serveurs</strong>
+          <ul>
+            <li>Linux (Debian, Ubuntu)</li>
+            <li>Windows Server (AD, DHCP)</li>
+            <li>Virtualisation (VMware, Proxmox)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <strong>Réseaux & Sécurité</strong>
+          <ul>
+            <li>Protocoles TCP/IP & VLAN</li>
+            <li>Supervision (Nagios, Wireshark)</li>
+            <li>Sécurisation des accès</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <strong>Automatisation</strong>
+          <ul>
+            <li>Scripting Bash (Linux)</li>
+            <li>Gestion de services Systemd</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <strong>Maintenance</strong>
+          <ul>
+            <li>Troubleshooting matériel</li>
+            <li>Diagnostic et réparation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="downloadBtn"><i class="fas fa-file-pdf"></i> Télécharger le CV</button>
+
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      const element = document.getElementById('cv-content');
+      element.classList.add('pdf-fix');
+
+      const opt = {
+        margin: 0,
+        filename: 'CV_Antoine_Halleux.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#1e1e1e' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        element.classList.remove('pdf-fix');
+      });
+    });
+  </script>
+</body>
+</html>
